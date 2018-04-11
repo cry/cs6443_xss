@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>URL Validator></title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.0/lux/bootstrap.min.css" rel="stylesheet" integrity="sha384-mDdzqEimigFhaXpqHTnkj2JumLRbFB9qEVJK77zv7lBrdvhyPgl0WaWE7jloVkek" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <a href="redirect.html?r={}cats.html" id="ha">Cat memes?</a>
+    </div>
+
+    <script>
+        document.getElementById("ha").href = document.getElementById("ha").href.replace("{}", window.location.href.replace("hackme.html", ""))
+    </script>
+</body>
+</html>
+

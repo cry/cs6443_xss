@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>URL Validator></title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.0/lux/bootstrap.min.css" rel="stylesheet" integrity="sha384-mDdzqEimigFhaXpqHTnkj2JumLRbFB9qEVJK77zv7lBrdvhyPgl0WaWE7jloVkek" crossorigin="anonymous">
+</head>
+<body>
+    redirecting..
+
+    <script>
+        rurl = location.href.split("r=")[1];
+
+        if (!rurl) {
+            alert("no url provided");
+            window.location.href = 'index.html';
+        }
+
+        url = decodeURIComponent(rurl);
+
+        if (url.indexOf(location.origin) > -1 && url.split("://")[1].split("/")[0] === location.origin.split("://")[1].split("/")[0]) {
+            console.log(url);
+            window.location.href = url;
+        } else {
+            alert("URL is outside domain");
+            window.location.href = 'index.html';            
+        }
+    </script>
+</body>
+</html>
+

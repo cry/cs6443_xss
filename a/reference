@@ -1,0 +1,1 @@
+http://localhost:8080/a/redirect.html?r=javascript://localhost:8080/%E2%80%A8alert(1)//http://localhost:8080
